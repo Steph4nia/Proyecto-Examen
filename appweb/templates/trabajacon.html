@@ -1,0 +1,28 @@
+ 
+    {% extends 'base.html '%} 
+    {% load static %}
+
+    {% block contenido %} 
+
+    {% load crispy_forms_tags %}  
+
+    <div class="container mt-5">
+        <div class="text-center">
+            <h2 class="mt-4">TRABAJA CON NOSOTROS</h2>
+        </div>
+
+        
+        <form id="formAddArt" method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %} 
+
+            {{form | crispy}}
+
+
+           
+            <button type="submit" class="btn btn-succss" style="background-color: white;">Agregar</button>
+            <button type="reset" class="btn btn-primary">Limpiar</button>
+
+        </form>
+        {{mensaje}}
+    </div>
+    {% endblock %}

@@ -1,0 +1,124 @@
+{% extends 'base.html ' %}
+
+{% load static %}
+
+{% block contenido %}
+
+{% load crispy_forms_tags %}
+
+    
+    <div class="container-fluid">
+        <div class="row">
+            
+            
+            <div class="card-header text-center">
+                
+              </div>
+            <div class="col-12" style="margin: auto; margin-top: 30px; ">
+
+
+              <div class="container">
+              <div class="row">
+                <div class="col-6" style="margin: auto; margin-top: 10px">
+                  <div class="card">
+                    <div class="card-header text-center">
+                     REGISTRO PARA SUBIR OBRAS
+                    </div>
+                    <div class="card-body">
+          
+                      <form class="row" action="#" enctype="application/x-www-form-urlencoded" method="POST" id="registroForm"
+                        novalidate>
+          
+                        <div class="mb-3">
+                          <label for="nombreart" class="form-label">Nombre Artista:</label>
+                          <input type="text" class="form-control"  id="nombreart" placeholder="">
+
+
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="tpObra" class="form-label">Tipo de obra:</label>
+                          <select id="tpObra" class="form-select">
+                            <option value="">Seleccione una opcion...</option>
+                            <option value="orfebreria">Orfebrería</option>
+                            <option value="pintura">Pintura</option>
+                            <option value="escultura">Escultura</option>
+                            <option value="tejido">Tejido</option>
+                          </select>
+                        </div>
+          
+                        <div class="mb-3">
+                          <label for="nombreobra" class="form-label">Nombre de la obra:</label>
+                          <input type="text" class="form-control"  id="nombreobra" placeholder="">
+
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="descobra" class="form-label">Descripción de la obra:</label>
+                          <textarea class="form-control" rows="5" id="descobra" placeholder=""></textarea>
+                        </div>
+                       
+          
+                        <div class="mb-3">
+                          <label for="valorObra" class="form-label">Valor de la obra:</label>
+                          <input type="text" class="form-control"  id="valorObra" placeholder="">
+                        </div>
+          
+          
+                        <div class="mb-3">
+                          <label for="fecha_ela" class="form-label">Fecha de Elaboración:</label>
+                          <input type="date" class="form-control"  id="fecha_ela" placeholder="">
+                        </div>
+        
+          
+                        
+          
+                       
+          
+                        <div class="mb-3">
+                          <label for="correo" class="form-label">Correo:</label>
+                          <input type="email" class="form-control"  id="correo" placeholder="">
+                        </div>
+          
+                        <div class="mb-3">
+                          <label for="celular" class="form-label">Celular:</label>
+                          <input type="text" class="form-control"  id="celular" placeholder="">
+                        </div>
+          
+                     
+                        <form action="submit-form.php" method="post" enctype="multipart/form-data">
+                          <div class="form-group">
+                            <label for="photo">Seleccionar foto:</label>
+                            <br>
+                            <input type="file" class="form-control-file" id="photo" name="photo">
+                          </div>
+                          
+                        </form>
+                        <br>
+          
+          
+                        <form id="formularioRegistroObra" action="" method="post">
+                          {% csrf_token %}
+                          {{form | crispy}}
+                          <button type="submit" class="btn btn-primary"> Enviar</button>
+              
+                        </form>
+                        {{mensaje}}
+
+                        
+          
+                      
+          
+                      </form>
+          
+                    </div>
+                  </div>
+                </div>
+                
+                
+        </div>
+    </div>
+
+    </div>
+
+{% endblock %}

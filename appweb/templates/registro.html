@@ -1,0 +1,45 @@
+{% extends 'base.html ' %}
+
+{% load static %}
+
+{% block contenido %}
+
+    
+
+    <div class="container-fluid">
+      <div class="col-8" style="margin: auto; margin-top: 10px">
+
+        <div class="card" style="border: solid; border-color:rgb(19, 16, 16)">
+
+        <div class="card-header text-center">
+          <h1>REGISTRO</h1>
+        </div>
+        <div class="card-body">
+                
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Nombre:</label>
+                    <input type="nombre" class="form-control" id="nombre">
+                  </div>
+                <div class="mb-3">
+                  <label for="correo" class="form-label">Correo electrónico:</label>
+                  <input type="email" class="form-control" id="correo" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónco con nadie.</div>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="password" class="form-label">Contraseña:</label>
+                  <input type="password" class="form-control" id="password">
+                </div>
+                <button type="submit" id="btnRegistrar" class="btn btn-primary">Registrar</button>
+              </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+  
+    
+{% endblock %}

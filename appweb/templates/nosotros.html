@@ -1,0 +1,36 @@
+{% extends 'base.html ' %}
+
+{% load static %}
+
+{% block contenido %}
+    
+  
+
+    <div class="container-fluid">
+
+        <div class="card mb-3">
+            <img src="{% static './imagenes/cafe.jpg' %}" class="card-img-top" alt="..."Bootstrap text-align: center; width="50" height="400">
+            <div class="card-body">
+              <h5 class="card-title">   Quiénes Somos</h5>
+              Somos una organización que busca profesionalización. Para nosotros lo mas importante es la experiencia artística, tanto para el artista como para el espectador. Esperamos darte la bienvenida a ti y a tus amigos para que sean parte de nuestro gran proyecto
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-title">   Misión</h5>
+                Contribuir y aportar en la democratización de la cultura, a través de las artes escénicas, transformándonos en una plataforma de creación, formación, producción, difusión de artistas y emprendedores culturales.
+               
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title">   Visión</h5>
+                Constituirnos como uno de los principales agentes de desarrollo de arte y cultura local, regional y nacional, a través de ejes de trabajo que nos permitan ser reconocidos por los artistas escénicos y por la comunidad beneficiaria.
+               
+              </div>
+          </div>
+          
+
+    </div>
+
+    
+
+    {% endblock %}

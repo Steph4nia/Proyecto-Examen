@@ -1,0 +1,83 @@
+{% extends 'base.html ' %}
+
+{% load static %}
+
+{% block contenido %}
+  
+
+<div class="container-fluid">
+  <div class="mx-auto p-2" style="width: -100px" >
+      <img src="{% static './imagenes/imagen4.jpg' %}" class="rounded mx-auto d-block" alt="pintor">
+  </div>
+  
+</div>
+
+<div class="container-fluid">
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                Historia
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                Perseo con la cabeza de Medusa, también denominada el Perseo de Cellini, es una escultura realizada en bronce por Benvenuto Cellini. Es considerada una de las obras cumbre de la escultura manierista italiana y una de las estatuas más famosas de la Piazza della Signoria en Florencia, Italia.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                Descripción
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                La escultura es conformada por dos cuerpos humanos: un hombre de pie sobre un cuerpo femenino sin cabeza. El hombre se encuentra desnudo, tiene el cabello rizado y corto. Lleva un casco con alas sobre la cabeza. Su rostro enfadado, mantiene una dirección recta hacia al suelo, de modo que el espectador situado ante ella puede observar su cara. Su mano derecha porta una espada larga, mientras que la mano izquierda porta en lo alto la cabeza de la mujer que derrama sangre por el cuello. El cuerpo femenino, se encuentra desnudo y acostado con una posición contorsionada. Su ropa se encuentra debajo, entre su cuerpo y una superficie plana. Y de su torso también mana sangre. La escultura representa a Perseo y Medusa; Perseo la acaba de decapitar con la espada que empuña en la mano derecha, mientras que con la mano izquierda sostiene triunfante la cabeza de la Gorgona tomada por su cabellera.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                Nombre
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Perseo con la cabeza de Medusa.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                  Precio
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  $2.887.051
+                </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                  Tecnica usada
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Bronce fundido a la cera perdida.
+                </div>
+              </div>
+            </div>
+          
+      </div>
+
+</div>
+
+
+{% endblock %}

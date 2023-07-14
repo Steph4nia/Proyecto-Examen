@@ -1,0 +1,60 @@
+{% extends 'base.html ' %}
+
+{% load static %}
+
+{% block contenido %}
+
+  
+
+
+    <div class="container-fluid"> <!-- formulario de contacto--> 
+      
+
+      <div class="col-8" style="margin: auto; margin-top: 10px">
+
+        <div class="card" style="border: solid; border-color:rgb(19, 16, 16)">
+
+        <div class="card-header text-center">
+          <h1>SUGERENCIAS</h1>
+        </div>
+        <div class="card-body">
+
+        <form class="row g-3">
+            <div class="col-md-4">
+              <label for="correo" class="form-label">Correo:</label>
+              <input type="email" class="form-control" id="correo" value="" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="comentario" class="form-label">Comentario:</label>
+              <textarea class="form-control" rows="5" id="comentario" placeholder=""required></textarea>
+            </div>
+            
+            
+            
+            <div class="col-12" >
+              <button class="btn btn-primary" type="submit" id="btnEnviarFor" style="background-color: grey;">Enviar Sugerencias </button>
+            </div>
+            <div id="contenido">
+
+              
+          </form>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  
+  {% endblock %}
+  {% if messages %}
+  {% for m in messages %}
+    <script>
+        Swal.fire({
+          "title": "Realiza una sugerencia",
+          "text": "{{m}}",
+          "icon": "success"
+      })
+    </script>
+  {% endfor %}
+{% endif %}

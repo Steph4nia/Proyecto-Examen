@@ -1,0 +1,36 @@
+{% extends 'base.html ' %}
+
+{% load static %}
+
+{% block contenido %} 
+
+{% load crispy_forms_tags %}
+
+
+ 
+
+    <div class="container-fluid"> <!-- formulario de contacto--> 
+
+      <div class="col-8" style="margin: auto; margin-top: 10px">
+
+        <div class="card" style="border: solid; border-color:rgb(19, 16, 16)">
+
+        <div class="card-header text-center">
+          <h1>CONTACTO</h1>
+        </div>
+        <div class="card-body">
+
+          <form id="formularioContacto" action="" method="post">
+            {% csrf_token %}
+            {{form | crispy}}
+            <button type="submit" class="btn btn-primary"> Enviar</button>
+
+          </form>
+          {{mensaje}}
+        </div>
+      </div>
+    </div>
+  </div>
+    
+{% endblock %}
+

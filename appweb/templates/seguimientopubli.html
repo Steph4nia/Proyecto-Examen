@@ -1,0 +1,148 @@
+{% extends 'base.html ' %}
+
+{% load static %}
+
+{% block contenido %}
+
+    <div class="container-fluid" >
+
+        <div class="row" >
+
+          
+
+          <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+               
+                  <a class="navbar-brand" href="#" >
+                    <img src="../imagenes/logo.png"Bootstrap width="60" height="60">
+                  </a>
+
+                  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">Menú</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a href="index.html" class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Servicios
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a href="formulario.html" class="dropdown-item" href="formulario.html">Formulario</a></li>
+
+                              
+
+
+                              <li><a class="dropdown-item" href="contacto.html">Contactos</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="ventas.html">Ventas</a></li> <!--por si falta alguna opcion-->
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link disabled">--</a>
+                          </li>
+                        </ul>
+                        <form class="d-flex" role="Buscar">
+                          <input class="form-control me-2" type="Buscar por autor" placeholder="Buscar por autor" aria-label="Buscar por autor">
+                          <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                      </div>
+                    </div>
+                  </nav>
+                  <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                      <a href="../index.html" class="navbar-brand" href="#"></a>
+                        <img src="../imagenes/iniciosesion.jpg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+                       
+                       
+                        
+                          <a id="btnlogin"  style="background-color: black;"href="../login.html" class="btn btn-success">Cerrar Sesion</a>
+                  
+                  
+                  
+                     
+
+                    
+                  </nav>
+                  
+                  
+                
+              </nav>
+
+        </div>
+
+    </div>
+
+    {% for a in artistapubli %}
+
+    <div class="container-fluid">
+        <div class="col-8" style="margin: auto; margin-top: 10px">
+  
+          <div class="card" style="border: solid; border-color:rgb(19, 16, 16)">
+  
+          <div class="card-header text-center">
+
+            <h1>SOLICITUDES</h1>
+          </div>
+          <div class="card-body">
+                  
+                  <table class="table">
+                      <thead>
+                        <tr>
+                         
+                          <th scope="col">{{a.Obra}} </th>
+                          
+                          <th scope="col">{{a.Artista}}</th>
+                          <th scope="col">{{a.Descripción}}</th>
+                          <th scope="col">{{a.Precio}}</th>
+                          <th scope="col">Seguimiento
+                          
+                          </th>
+                        </tr>
+ 
+                      </thead>
+
+                      <tbody>
+                        
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>{{a.artista}}</td>
+                          <td>{{a.descripcion}}</td>
+                          <td>{{a.precio}}</td>
+                          <td> <div class="d-grid gap-2 col-6 mx-auto">              
+                            <button id="verEstado" type="submit" class="btn btn-primary" style="border-radius: 30px">Ver Estado</button>
+
+                          </div></td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+  
+          </div>
+      </div>
+  
+      </div>
+
+
+
+      <form id="obrarechazada" class="container-fluid" style="display:none;">
+
+        <div class="mb-3">
+          <label for="comentario" class="form-label">Comentario:</label>
+          <textarea class="form-control" rows="5" id="comentario" placeholder="" required></textarea>
+        </div>
+  
+      <div id="obraceptada" style="display:none;"> <!--display:none ocultara el div hasta que sea utilizado-->
+        <p>¡¡¡La obra ha sido aceptada correctamente!!!</p>
+      </div>
+
+      {% endfor %}
+  
+{% endblock %}
